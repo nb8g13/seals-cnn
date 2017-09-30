@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*.tfrecords
+output-images/
+heatmaps/
+clean-images/
+t-images/
+eval/
+lfw_train_model/
