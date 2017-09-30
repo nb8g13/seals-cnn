@@ -320,7 +320,15 @@ def evaluate():
 def main(argv=None):
     if tf.gfile.Exists(FLAGS.eval_dir):
         tf.gfile.DeleteRecursively(FLAGS.eval_dir)
+        tf.gfile.DeleteRecursively("./output-images")
+        tf.gfile.DeleteRecursively("./heatmaps")
+        tf.gfile.DeleteRecursively("./clean-images")
+        tf.gfile.DeleteRecursively("./t-images")
     tf.gfile.MakeDirs(FLAGS.eval_dir)
+    tf.gfile.MakeDirs("./output-images")
+    tf.gfile.MakeDirs("./heatmaps")
+    tf.gfile.MakeDirs("./clean-images")
+    tf.gfile.MakeDirs("./t-images")
     evaluate()
 
 if __name__ == "__main__":
