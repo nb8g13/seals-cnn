@@ -9,7 +9,7 @@ To format your own dataset into a tfrecord file which is accepted by the CNN ple
 
 To train the CNN, run lfw_train.py and to evaluate data run lfw_eval.py. If you wish to change the training and evaluation datasets, you will need to change the global variables within lfw_input.py.
 
-Neither of these modules take command line arguments at the moment, however each file does contain global variables that you can use to tweek model parameters.
+Neither of these modules take command line arguments at the moment, however each file does contain global variables that you can use to tweek evaluation and training parameters. The code specifying the CNN is lfw_siamese.py. There are also variables in this file which you can change to tweek model parameters.
 
 When ran, lfw_eval.py will store landmarked versions of images in the evaluation set in the output-images folder and number them. lfw_eval.py will also print the numbers of the best 5 matching images to a few sample images in the evaluation dataset. Matching is done by forming two point ditribution models and combining them together into one point distribution model. The first point distribution model is built from the landmark coordinates themselves, while the second point ditribution model is built using the pixel patches around each landmark as feature vectors.
 
